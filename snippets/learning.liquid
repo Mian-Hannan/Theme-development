@@ -46,4 +46,9 @@
     {% else %}
       <p>I dont care About your age and use of case keyword</p>
   {% endcase %}
+
+  <!-- use of forloop -->
+  {% for coll in collection %}
+  <p>{{ coll.title }}</p>
+    {% endfor %}
 </div>
