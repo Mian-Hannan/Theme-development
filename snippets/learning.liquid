@@ -51,8 +51,8 @@
   <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
   {% for coll in collections %}
     {% if coll.title == "Clothes" %}
-  <p>{{ coll.title }}</p>
     {% continue %}
       {% endif %}
+  <p>{{ coll.title }}</p>
     {% endfor %}
 </div>
