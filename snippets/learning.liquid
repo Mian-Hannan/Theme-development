@@ -1,7 +1,7 @@
 {% comment %} Liquid Learning {% endcomment %}
 <style>
   .wrapper {
-    padding: 100px;
+    padding: 50px 100px;
     font-weight: bold;
     font-size: 17px;
   }
@@ -11,23 +11,46 @@
   {% assign mystring = 'Hello world!' %}
   {{ mystring }}
   {% capture mysecondstring %}
-    This is My Second String
+    <p>This is My Second String</p>
     {% endcapture %}
   {{ mysecondstring }}
-  {% assign abc = "My Name is Hassan" %}
-  {{ abc }}
-  {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
-  {{ abc }}
-   {% assign age_one = 35 %}
-   {% assign age_two = 30 %}
-   
-   {{ age_two }}
-   {% if age_one > age_two %}
+
+  {% comment %}
+    Conditonal Structure in Shopify Liquid.
+    In liquid Logical Operator like && || are written in words like
+    'and', 'or'
+  {% endcomment %}
+
+  {% assign age_one = 35 %}
+  {% assign age_two = 32 %}
+
+  {% if age_one > age_two %}
     <p>something new</p>
     {{ age_one }}
-   {% elsif age_one < age_two %}
-     <p>something</p>
-     {{ age_two }}
-    {% endif %}
+  {% elsif age_one < age_two %}
+    <p>something</p>
+    {{ age_two }}
+  {% endif %}
 
+  {% comment %}
+    "unless Keyword is used to execute set of code when certsin condition return false.
+    it is opposite of {% if %} and similar with {% if not %} "
+  {% endcomment %}
+
+  {% unless age_one > 40 %}
+    <p>This Is Due to unless Keyword</p>
+  {% else %}
+    <p>This is BCZ unless is False</p>
+  {% endunless %}
+
+  {% comment %} Another Type of controlFlow is {% case %} it uses {% when %} keyword and also use else {% endcomment %}
+
+  {% case age_two %}
+    {% when 30 %}
+      <p>You are Exactly 30 yeas old</p>
+    {% when > %}
+      <p>You are Exactly 40 yeas old</p>
+    {% else %}
+      <p>I dont care About your age</p>
+  {% endcase %}
 </div>
