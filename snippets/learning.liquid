@@ -76,4 +76,14 @@
     {{ forloop.index0 }}
     <p>{{ coll.title }}</p>
   {% endfor %}
+
+  {% comment %} There is an All in one tag that is {liquid} {% endcomment %}
+
+  {% liquid
+    assign name = "Ali";
+    assign gender = "male";
+    if name  == "Ali";
+    <p>You are My Freind</p>
+    endif
+  %}
 </div>
