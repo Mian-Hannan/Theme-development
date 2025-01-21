@@ -18,10 +18,9 @@
   {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
    {% assign age = 35 %}
    {% if age > 20 %}
-    You can Eat it
+    {{ "You can Eat it" }}
    {% elseif age < 20 %}
-    You are not eligible to Eat it
-
+   {{ "    You are not eligible to Eat it" }}
     {% endif %}
 
 </div>
