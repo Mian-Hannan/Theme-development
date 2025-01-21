@@ -18,7 +18,7 @@
   {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
   
    {% assign age_one = 35 %}
-   {% assign age_two = 32 %}
+   {% assign age_two = 30 %}
    {% if age_one > age_two %}
     <p>something new</p>
     {{ age_one }}
@@ -40,10 +40,10 @@
 
   {% case age_two %}
     {% when 30 %}
-      <p>You are Exactly 30 yeas old</p>
-    {% when > %}
-      <p>You are Exactly 40 yeas old</p>
+      <p>You are Exactly 30 yeas old and use of case keyword</p>
+    {% when 40 %}
+      <p>You are Exactly 40 yeas old and use of case keyword</p>
     {% else %}
-      <p>I dont care About your age</p>
+      <p>I dont care About your age and use of case keyword</p>
   {% endcase %}
 </div>
