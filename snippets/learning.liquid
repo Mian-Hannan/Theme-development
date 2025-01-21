@@ -1,21 +1,27 @@
 {% comment %} Liquid Learning {% endcomment %}
- <style> 
-   
-    .wrapper {
-        height: 100vh;
-        padding: 100px;
-        font-weight: bold; 
-        font-size: 30px;
-    }
-    </style>
+<style>
+  .wrapper {
+    height: 100vh;
+    padding: 100px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+</style>
 <div class="wrapper">
-{% comment %} assign and captured are the keywords to make variablres {% endcomment %}
+  {% comment %} assign and captured are the keywords to make variablres {% endcomment %}
   {% assign mystring = 'Hello world!' %}
   {{ mystring }}
-  <h3>
-  {% capture mySecondString %}
+  {% capture mysecondstring %}
     This is My Second String
     {% endcapture %}
-    {{ mySecondString }}
-</h3>
+  {{ mysecondstring }}
+  {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
+   {% assign age = 35 %}
+   {% if age > 20 %}
+    You can Eat it
+   {% elseif age < 20 %}
+    You are not eligible to Eat it
+   {% else %}
+    Good Bye!
+
 </div>
