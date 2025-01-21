@@ -54,6 +54,7 @@
 
   <p style="color: red;">Use of For loop</p>
   {% for coll in collections %}
+    {{ forloop.index0 }}
     <p>{{ coll.title }}</p>
   {% endfor %}
 
@@ -62,6 +63,7 @@
     {% if coll.title == 'Clothes' %}
       {% continue %}
     {% endif %}
+    {{ forloop.index0 }}
     <p>{{ coll.title }}</p>
   {% endfor %}
 
@@ -71,6 +73,7 @@
       {% break %}
       {% comment %} This will break the loop mean that code will no execute further when the certain condition will return true {% endcomment %}
     {% endif %}
+    {{ forloop.index0 }}
     <p>{{ coll.title }}</p>
   {% endfor %}
 </div>
