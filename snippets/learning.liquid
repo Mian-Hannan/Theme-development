@@ -14,8 +14,11 @@
     This is My Second String
     {% endcapture %}
   {{ mysecondstring }}
-  {% assign abc = "My Name is Hassan" %}
-  {{ abc }}
+  
+  {% assign a = 10 %}
+  {% assign b = 10 %}
+  {% assign c = a + b %}
+  {{ c + 10 }}
   {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
   {{ abc }}
    {% assign age_one = 35 %}
@@ -29,5 +32,4 @@
      <p>something</p>
      {{ age_two }}
     {% endif %}
-
 </div>
