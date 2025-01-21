@@ -3,7 +3,7 @@
   .wrapper {
     padding: 50px 100px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
   }
 </style>
 <div class="wrapper">
@@ -11,6 +11,7 @@
   {% assign mystring = 'Hello world!' %}
   {{ mystring }}
   {% capture mysecondstring %}
+
     <p>This is My Second String</p>
     {% endcapture %}
   {{ mysecondstring }}
@@ -25,6 +26,16 @@
   {% assign age_two = 32 %}
 
   {% if age_one > age_two %}
+
+     <p>This is My Second String</p>
+    {% endcapture %}
+  {{ mysecondstring }}
+  
+  {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
+  
+   {% assign age_one = 35 %}
+   {% assign age_two = 30 %}
+   {% if age_one > age_two %}
     <p>something new</p>
     {{ age_one }}
   {% elsif age_one < age_two %}
@@ -53,4 +64,49 @@
     {% else %}
       <p>I dont care About your age</p>
   {% endcase %}
-</div>
+
+  {% comment %} "unless Keyword is used to execute set of code when certsin condition return false. 
+     it is opposite of {% if %} and similar with {% if not %} " {% endcomment %}
+
+     {% unless age_one > 40 %}
+        <p>This Is Due to unless Keyword</p>
+     {% else %}
+        <p>This is BCZ unless is False</p>
+     {% endunless %}
+
+   {% comment %} Another Type of controlFlow is {% case %} it uses {% when %} keyword and also use else {% endcomment %}
+
+  {% case age_two %}
+    {% when 30 %}
+      <p>You are Exactly 30 yeas old and use of case keyword</p>
+    {% when 40 %}
+      <p>You are Exactly 40 yeas old and use of case keyword</p>
+    {% else %}
+      <p>I dont care About your age and use of case keyword</p>
+  {% endcase %}
+
+  <!-- use of forloop -->
+  <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
+
+  <p>Use of For loop</p>
+  {% for coll in collections %}
+  <p>{{ coll.title }}</p>
+  {% endfor %}
+
+  <p>Use of continue statement</p>
+  {% for coll in collections %}
+      {% if coll.title == "Clothes" %}
+        {% continue %} 
+        {% comment %} This will not display "Cloehs tiltle" bcz this will take the control to start of loop {% endcomment %}
+      {% endif %}
+      <p>{{ coll.title }}</p>
+  {% endfor %}
+  <p>use of break statement</p>
+  {% for coll in collections %}
+      {% if coll.title == "Clothes" %}
+        {% break %} 
+        {% comment %} This will break the loop mean that code will no execute further when the certain condition will return true {% endcomment %}
+      {% endif %}
+      <p>{{ coll.title }}</p>
+  {% endfor %}
+    </div>
