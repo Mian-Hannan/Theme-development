@@ -35,4 +35,15 @@
      {% else %}
         <p>This is BCZ unless is False</p>
      {% endunless %}
+
+   {% comment %} Another Type of controlFlow is {% case %} it uses {% when %} keyword and also use else {% endcomment %}
+
+  {% case age_two %}
+    {% when 30 %}
+      <p>You are Exactly 30 yeas old</p>
+    {% when > %}
+      <p>You are Exactly 40 yeas old</p>
+    {% else %}
+      <p>I dont care About your age</p>
+  {% endcase %}
 </div>
