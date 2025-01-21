@@ -51,13 +51,21 @@
 
   <!-- use of forloop -->
   <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
+
+  <p>Use of For loop</p>
+  {% for coll in collections %}
+    <p>{{ coll.title }}</p>
+  {% endfor %}
+
+  <p>Use of continue statement</p>
   {% for coll in collections %}
     {% if coll.title == 'Clothes' %}
       {% continue %}
     {% endif %}
     <p>{{ coll.title }}</p>
   {% endfor %}
-  <p>use of break</p>
+
+  <p>use of break statement</p>
   {% for coll in collections %}
     {% if coll.title == 'Clothes' %}
       {% break %}
