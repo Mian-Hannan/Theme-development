@@ -26,4 +26,13 @@
      <p>something</p>
      {{ age_two }}
     {% endif %}
+
+  {% comment %} "unless Keyword is used to execute set of code when certsin condition return false. 
+     it is opposite of {% if %} and similar with {% if not %} " {% endcomment %}
+
+     {% unless age_one > 40 %}
+        <p>This Is Due to unless Keyword</p>
+     {% else %}
+        <p>This is BCZ unless is False</p>
+     {% endunless %}
 </div>
