@@ -14,29 +14,31 @@
      <p>This is My Second String</p>
     {% endcapture %}
   {{ mysecondstring }}
-  
+
   {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
-  
-   {% assign age_one = 35 %}
-   {% assign age_two = 30 %}
-   {% if age_one > age_two %}
+
+  {% assign age_one = 35 %}
+  {% assign age_two = 30 %}
+  {% if age_one > age_two %}
     <p>something new</p>
     {{ age_one }}
-   {% elsif age_one < age_two %}
-     <p>something</p>
-     {{ age_two }}
-    {% endif %}
+  {% elsif age_one < age_two %}
+    <p>something</p>
+    {{ age_two }}
+  {% endif %}
 
-  {% comment %} "unless Keyword is used to execute set of code when certsin condition return false. 
-     it is opposite of {% if %} and similar with {% if not %} " {% endcomment %}
+  {% comment %}
+    "unless Keyword is used to execute set of code when certsin condition return false.
+    it is opposite of {% if %} and similar with {% if not %} "
+  {% endcomment %}
 
-     {% unless age_one > 40 %}
-        <p>This Is Due to unless Keyword</p>
-     {% else %}
-        <p>This is BCZ unless is False</p>
-     {% endunless %}
+  {% unless age_one > 40 %}
+    <p>This Is Due to unless Keyword</p>
+  {% else %}
+    <p>This is BCZ unless is False</p>
+  {% endunless %}
 
-   {% comment %} Another Type of controlFlow is {% case %} it uses {% when %} keyword and also use else {% endcomment %}
+  {% comment %} Another Type of controlFlow is {% case %} it uses {% when %} keyword and also use else {% endcomment %}
 
   {% case age_two %}
     {% when 30 %}
@@ -45,14 +47,15 @@
       <p>You are Exactly 40 yeas old and use of case keyword</p>
     {% else %}
       <p>I dont care About your age and use of case keyword</p>
-  {% endcase %}
+  {% endcase -%}
+  u
 
   <!-- use of forloop -->
   <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
   {% for coll in collections %}
-    {% if coll.title == "Clothes" %}
-    {% continue %}
-      {% endif %}
-  <p>{{ coll.title }}</p>
-    {% endfor %}
+    {% if coll.title == 'Clothes' %}
+      {% continue %}
+    {% endif %}
+    <p>{{ coll.title }}</p>
+  {% endfor %}
 </div>
