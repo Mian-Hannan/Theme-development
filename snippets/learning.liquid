@@ -18,16 +18,16 @@
   {{ abc }}
   {% comment %} Conditonal Structure in Shopify Liquid {% endcomment %}
   {{ abc }}
-   {% comment %} {% assign age_one = 35 %} {% endcomment %}
+   {% assign age_one = 35 %}
    {% assign age_two = 30 %}
    
    {{ age_two }}
-   {% comment %} {% if age_one > age_two %}
+   {% if age_one > age_two %}
     <p>something new</p>
     {{ age_one }}
-   {% elseif age_one < age_two %}
+   {% elsif age_one < age_two %}
      <p>something</p>
      {{ age_two }}
-    {% endif %} {% endcomment %}
+    {% endif %}
 
 </div>
