@@ -3,8 +3,10 @@
 {% comment %} assign and captured are the keywords to make variablres {% endcomment %}
   {% assign mystring = 'Hello world!' %}
   {{ mystring }}
+  <h3>
   {% capture mySecondString %}
     This is My Second String
     {% endcapture %}
     {{ mySecondString }}
+</h3>
 </div>
