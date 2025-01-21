@@ -50,14 +50,14 @@
   {% endcase -%}
 
   <!-- use of forloop -->
-  <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
+  <p style="color: green;">use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
 
-  <p>Use of For loop</p>
+  <p style="color: red;">Use of For loop</p>
   {% for coll in collections %}
     <p>{{ coll.title }}</p>
   {% endfor %}
 
-  <p>Use of continue statement</p>
+  <p style="color: red;">Use of continue statement</p>
   {% for coll in collections %}
     {% if coll.title == 'Clothes' %}
       {% continue %}
