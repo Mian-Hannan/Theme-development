@@ -48,13 +48,20 @@
     {% else %}
       <p>I dont care About your age and use of case keyword</p>
   {% endcase -%}
-  u
 
   <!-- use of forloop -->
   <p>use of for loop to fetch collections titles. Also Use of countinue and break statement</p>
   {% for coll in collections %}
     {% if coll.title == 'Clothes' %}
       {% continue %}
+    {% endif %}
+    <p>{{ coll.title }}</p>
+  {% endfor %}
+  <p>use of break</p>
+  {% for coll in collections %}
+    {% if coll.title == 'Clothes' %}
+      {% break %}
+      {% comment %} This will break the loop mean that code will no execute further when the certain condition will return true {% endcomment %}
     {% endif %}
     <p>{{ coll.title }}</p>
   {% endfor %}
