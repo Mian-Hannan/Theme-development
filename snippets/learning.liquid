@@ -78,10 +78,13 @@
   {% endfor %}
 
   {% liquid
-    assign nameis = "Ali";
+    assign name = "Ali";
     assign gender = "male";
-    if nameis  == "Ali";
-      assign like = 'yes';
+    if name  == "Ali";
+      assign likeOranges = 'yes';
     endif
   %}
+  <p>{{ name }}</p>
+  <p>{{ gender }}</p>
+  <p>{{ likeOranges }}</p>
 </div>
