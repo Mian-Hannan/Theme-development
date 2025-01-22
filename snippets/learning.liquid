@@ -5,6 +5,9 @@
     font-weight: bold;
     font-size: 20px;
   }
+  .pro-image {
+    width: 400px;
+  }
 </style>
 <div class="wrapper">
   {% comment %} assign and captured are the keywords to make variablres {% endcomment %}
@@ -130,7 +133,7 @@
 {% endunless %}
 {% for product in collection.products %}
   {% if product.featured_image %}
-    <img src="{{ product | file_img_url: 'medium' }}">
+    <img class="pro-image" src="{{ product | image_url }}">
   {% endif %}
   <h2>{{ product.title }}</h2>
   <h2>{{ product.price | money}}</h2>
