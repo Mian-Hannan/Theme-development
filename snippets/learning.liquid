@@ -88,4 +88,13 @@
   <p>{{ name }}</p>
   <p>{{ gender }}</p>
   <p>{{ likeOranges }}</p>
+
+  {% comment %} Some of Methods {% endcomment %}
+
+  <p style="color: red;">Some of Methods</p>
+  {% assign skill = "Shopify Development" %}
+  <p>{{ skill | upcase | append: "And Web Development" }}</p>
+  <p>{{ skill | append: "And Web Development" | upcase }}</p>
+  {% comment %} <p style="color: blue;">SOME OF METHODS And Web Development</p> {% endcomment %}
+
 </div>
