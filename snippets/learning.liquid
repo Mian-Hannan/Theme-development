@@ -104,5 +104,6 @@
 
   {% comment %} We can access any asset in cose using the following syntax. Firstly i save an image in asset... asset_url is special keyword{% endcomment %}
 
-{{ 'random image.jpeg'| asset_img_url }}
+{{ 'random image.jpeg'| asset_url }}
+<img src="{{ 'random image.jpeg'| asset_img_url }}">
 </div>
