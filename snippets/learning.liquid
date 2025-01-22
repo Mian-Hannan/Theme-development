@@ -116,4 +116,9 @@
 {% comment %} TO connect style sheet and js {% endcomment %}
 {{ 'style.css'| stylesheet_tag }}
 {{ 'script.js'| script_tag }}
+
+{% comment %} render is used to fetch from snippets and section is used to fetch from sections {% endcomment %}
+
+{% render 'social-icon' %}
+{% section 'header' %}
 </div>
