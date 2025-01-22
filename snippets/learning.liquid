@@ -95,6 +95,7 @@
   {% assign skill = "Shopify Development" %}
   <p>{{ skill | upcase | append: " And Web Development use of 'append' and 'upcase' method" }}</p>
   <p>{{ skill | append: " And Web Development use of 'append' and 'upcase' method" | upcase }}</p>
+  <p>{{ skill | append: " And Web Development use of 'append','replace' and 'upcase' method" | replace: 'SHOPIFY', 'LIQUID' | upcase }}</p>
   {% comment %} <p style="color: blue;">SOME OF METHODS And Web Development</p> {% endcomment %}
 
 </div>
