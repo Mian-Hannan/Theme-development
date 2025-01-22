@@ -96,9 +96,13 @@
   <p>{{ skill | upcase | append: " And Web Development use of 'append' and 'upcase' method" }}</p>
   <p>{{ skill | append: " And Web Development use of 'append' and 'upcase' method" | upcase }}</p>
   <p>{{ skill | append: " And Web Development use of 'append','replace' and 'upcase' method" | replace: "SHOPIFY","LIQUID" | upcase }}</p>
+
   {% comment %} In shopify the money is by default in cents {% endcomment %}
   <p style="color: darkred;">"Money" is a method that is used to convert numbers in money format</p>
   {% assign amount = 455 %}
   <p>{{ amount | money }}</p>
 
+  {% comment %} We can access any asset in cose using the following syntax. Firstly i save an image in asset... asset_url is special keyword{% endcomment %}
+
+{{ 'random image.jpeg'| asset_url }}
 </div>
