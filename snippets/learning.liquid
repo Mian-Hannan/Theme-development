@@ -113,4 +113,7 @@
 <br>
 <img src="{{ 'theme_cover_image.jpg'| file_img_url: '400x400' }}">
 
+{% comment %} TO connect style sheet and js {% endcomment %}
+{{ 'style.css'| stylesheet_tag }}
+{{ 'script.js'| script_tag }}
 </div>
