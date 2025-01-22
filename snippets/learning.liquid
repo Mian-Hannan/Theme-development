@@ -77,13 +77,11 @@
     <p>{{ coll.title }}</p>
   {% endfor %}
 
-  {% comment %} There is an All in one tag that is {liquid} {% endcomment %}
-
   {% liquid
-    assign name = "Ali";
+    assign nameis = "Ali";
     assign gender = "male";
-    if name  == "Ali";
-    <p>You are My Freind</p>
+    if nameis  == "Ali";
+      assign like = 'yes'
     endif
   %}
 </div>
