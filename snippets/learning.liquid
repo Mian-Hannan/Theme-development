@@ -96,6 +96,9 @@
   <p>{{ skill | upcase | append: " And Web Development use of 'append' and 'upcase' method" }}</p>
   <p>{{ skill | append: " And Web Development use of 'append' and 'upcase' method" | upcase }}</p>
   <p>{{ skill | append: " And Web Development use of 'append','replace' and 'upcase' method" | replace: "SHOPIFY","LIQUID" | upcase }}</p>
-  {% comment %} <p style="color: blue;">SOME OF METHODS And Web Development</p> {% endcomment %}
+  {% comment %} In shopify the money is by default in cents {% endcomment %}
+  <p style="color: darkred;">money is a method that is used to convert numbers in dollars / cents</p>
+  {% assign amount = 455 %}
+  <p>{{ amount | money }}</p>
 
 </div>
