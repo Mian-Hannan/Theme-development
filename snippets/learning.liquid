@@ -78,5 +78,14 @@
   {% endfor %}
 
   {% comment %} There is an All in one tag that is {liquid} {% endcomment %}
-
+  {% liquid
+    assign name = "Ali";
+    assign gender = "male";
+    if name  == "Ali";
+      assign likeOranges = 'yes';
+    endif
+  %}
+  <p>{{ name }}</p>
+  <p>{{ gender }}</p>
+  <p>{{ likeOranges }}</p>
 </div>
