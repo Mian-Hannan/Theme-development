@@ -130,10 +130,10 @@
 {% endunless %}
 {% for product in collection.products %}
   {% if product.featured_image %}
-    <img src="{{ product | image_url: '300x' }}">
+    <img src="{{ product | file_img_url: 'medium' }}">
   {% endif %}
-  <h3>{{ product.title }}</h3>
-  <h3>{{ product.price | money}}</h3>
+  <h2>{{ product.title }}</h2>
+  <h2>{{ product.price | money}}</h2>
   {% else %}
     <p>There is no product in {{ collection.title }}</p>
   {% endfor %}
