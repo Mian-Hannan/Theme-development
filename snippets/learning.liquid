@@ -121,4 +121,21 @@
 
 {% render 'hello' %}
 {% section 'header' %}
+
+<h2 style="color: red;">Some of practical</h2>
+{% for collection in collections  %}
+<h1>{{ collection.title }}</h1>
+{% unless collection.description == blank %}
+  <p>{{ collection.description }}</p>
+{% endunless %}
+{% for product in collection.products %}
+  {% if product.featured_image %}
+    <img src="{{ product | image_url }}">
+  {% endif %}
+  <h3>{{ product.title }}</h3>
+  <h3>{{ product.price }}</h3>
+  {% else %}
+    <p>There is no product in {{ collection.title }}</p>
+  {% endfor %}
+  {% endfor %}
 </div>
